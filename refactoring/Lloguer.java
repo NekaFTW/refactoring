@@ -35,7 +35,7 @@ public class Lloguer {
 	public Vehicle getVehicle() {
 		return vehicle;
 	}
-	
+
 	public double quantitat() {
 		double quantitat = 0;
 		switch (this.getVehicle().getCategoria()) {
@@ -63,9 +63,11 @@ public class Lloguer {
 		int bonificacions = 0;
 		bonificacions ++;
 		// afegeix bonificació per dos dies de lloguer de Luxe
-		if (this.getVehicle().getCategoria() == Vehicle.LUXE && this.getDies()>1 ) {
+		if (this.getVehicle().getCategoria() == Vehicle.LUXE &&
+				this.getDies()>1 ) {
 			bonificacions ++;
 		}
 		return bonificacions;
 	}
+
 }
