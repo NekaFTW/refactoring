@@ -1,6 +1,6 @@
 // Nekane Pardo Ruiz | DAM1B
 
-// package refactoring;
+//package refactoring;
 
 import java.util.Vector;
 
@@ -85,5 +85,42 @@ public class Client {
 		}
 		return total;
 	}
+
+	public String informeHTML() {
+		return composaCapsaleraHTML()+composaDetallHTML()+composaPeuHTML();
+	}
+	
+	
+	public String composaCapsaleraHTML() {
+		String resultat = "<h1>Informe de lloguers</h1>" + "\n"
+				+"\t <p>Informe de lloguers del client <em>"
+				+getNom() + " </em> (<stong>"
+				+ getNif() + "</strong>)</p>\n";
+		
+		return resultat;
+	}
+	
+	public String composaDetallHTML() {
+		String resultat = "<table> \n"
+				+ "<tr><td><strong>Marca</strong></td>"
+				+ "<td><strong>Model</strong></td>"
+				+ "<td><strong>Import</strong></td></tr>";
+		for (Lloguer lloguer: lloguers) {
+			// composa els resultats d'aquest lloguer
+			resultat += "\t <tr><td>" + lloguer.getVehicle().getMarca()
+					+ "</td><td>" +	lloguer.getVehicle().getModel()
+					+ "</td><td>" + (lloguer.quantitat() * 30) + "€</td></tr>\n";
+		}
+		resultat += "</table>\n";
+		return resultat;
+	}
+
+	public String composaPeuHTML() {
+		String resultat = "";
+		resultat += "<p>Import a pagar: <em>" + importTotal() + "€</em></p>\n"
+				+ "<p>Punts guanyats: <em>" + bonificacionsTotal() + "</em></p>\n";
+		return resultat;
+	}
+
 
 }
