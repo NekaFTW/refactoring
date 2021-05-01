@@ -1,6 +1,6 @@
 // Nekane Pardo Ruiz | DAM1B
 
-package refactoring;
+// package refactoring;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,7 +19,7 @@ public class Main {
 		Vehicle vehicle2 = new Vehicle("Audi", "RS5", Vehicle.LUXE);
 		date = dateFormat.parse("10/10/2017");
 		Lloguer lloguer2 = new Lloguer(date, 5, vehicle2);
-	
+		
 		// Vehicle3
 		Vehicle vehicle3 = new Vehicle("Fiat", "Multipla", Vehicle.GENERAL);
 		date = dateFormat.parse("2/8/2019");
@@ -27,8 +27,8 @@ public class Main {
 
 		// demostració de formatat d'una data
 		// System.out.println(dateFormat.format(lloguerBasic.getData()));
-	
-		Client cliente = new Client ("6556566","pepito","666333222");
+		
+		Client cliente = new Client ("65565667H","pepito","666333222");
 		cliente.afegeix(lloguer1);
 		cliente.afegeix(lloguer2);
 		cliente.afegeix(lloguer3);

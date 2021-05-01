@@ -1,6 +1,7 @@
 // Nekane Pardo Ruiz | DAM1B
 
-package refactoring;
+// package refactoring;
+
 import java.util.Vector;
 
 public class Client {
@@ -41,7 +42,7 @@ public class Client {
 	public boolean conte(Lloguer lloguer) {
 		return lloguers.contains(lloguer);
 	}
-
+	
 	public String informe() {
 		return composaCapsalera()+composaDetall()+composaPeu();
 	}
@@ -51,7 +52,7 @@ public class Client {
 				getNom() + " (" + getNif() + ")\n";
 		return resultat;
 	}
-
+	
 	public String composaDetall() {
 		String resultat = "";
 		for (Lloguer lloguer: lloguers) {
@@ -68,6 +69,7 @@ public class Client {
 		return resultat;
 	}
 	
+	
 	public int bonificacionsTotal() {
 		int bonificacions = 0;
 		for (Lloguer lloguer: lloguers) {
@@ -75,7 +77,7 @@ public class Client {
 		}
 		return bonificacions;
 	}
-
+	
 	public double importTotal() {
 		double total = 0;
 		for (Lloguer lloguer: lloguers) {
