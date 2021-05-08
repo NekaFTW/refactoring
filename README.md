@@ -1,2 +1,2 @@
 # refactoring
-Porjecte Refactoring (M5)
+Projecte Refactoring (M5)
